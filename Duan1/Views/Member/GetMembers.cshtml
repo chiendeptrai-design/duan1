@@ -1,0 +1,37 @@
+﻿<h2>Danh sách thành viên</h2>
+
+<a href="/Member/Create" class="btn btn-primary">
+    Thêm mới
+</a>
+
+<br />
+<br />
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>Mã thành viên</th>
+            <th>Username</th>
+            <th>Họ và tên</th>
+            <th>Password</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var member in ViewBag.members)
+        {
+            <tr>
+                <td>@member.MemberId</td>
+                <td>@member.Username</td>
+                <td>@member.Fullname</td>
+                <td>@member.Password</td>
+                <td>@member.Email</td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>

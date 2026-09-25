@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Cửa hàng";
+}
+
+<div class="container py-4">
+    <!-- Header & Bộ lọc nhanh -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="fw-bold mb-1">Sản phẩm nổi bật</h2>
+            <p class="text-muted mb-0">Khám phá các sản phẩm công nghệ mới nhất</p>
+        </div>
+        <div class="d-flex gap-2">
+            <select class="form-select w-auto">
+                <option selected>Sắp xếp theo: Mới nhất</option>
+                <option value="1">Giá: Thấp đến Cao</option>
+                <option value="2">Giá: Cao đến Thấp</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        <!-- Card Sản phẩm 1 -->
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden product-card">
+                <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500"
+                         class="card-img-top object-fit-cover"
+                         style="height: 220px;"
+                         alt="Bàn phím cơ">
+                    <span class="badge bg-danger position-absolute top-0 start-0 m-2">-15%</span>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <small class="text-muted text-uppercase fw-semibold mb-1">Bàn phím</small>
+                    <h6 class="card-title fw-bold mb-2 text-truncate">Bàn phím cơ không dây TKL</h6>
+                    <div class="mt-auto">
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <span class="fs-5 fw-bold text-primary">1.250.000 đ</span>
+                            <span class="text-muted text-decoration-line-through small">1.500.000 đ</span>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <a href="/Product/Detail/1" class="btn btn-outline-secondary btn-sm">Xem chi tiết</a>
+                            <button class="btn btn-primary btn-sm fw-semibold">Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Sản phẩm 2 -->
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden product-card">
+                <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500"
+                         class="card-img-top object-fit-cover"
+                         style="height: 220px;"
+                         alt="Chuột Gaming">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <small class="text-muted text-uppercase fw-semibold mb-1">Chuột</small>
+                    <h6 class="card-title fw-bold mb-2 text-truncate">Chuột Gaming siêu nhẹ RGB</h6>
+                    <div class="mt-auto">
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <span class="fs-5 fw-bold text-primary">790.000 đ</span>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <a href="/Product/Detail/2" class="btn btn-outline-secondary btn-sm">Xem chi tiết</a>
+                            <button class="btn btn-primary btn-sm fw-semibold">Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .product-card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .product-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+    }
+</style>

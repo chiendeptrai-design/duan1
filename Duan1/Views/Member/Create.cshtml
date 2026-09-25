@@ -1,0 +1,52 @@
+﻿@model DuAn1.Models.Member
+
+<h2>Thêm mới thành viên</h2>
+
+<form asp-controller="Member"
+      asp-action="Create"
+      method="post">
+
+    <div class="form-group">
+        <label asp-for="MemberId">Mã thành viên</label>
+
+        <input asp-for="MemberId"
+               class="form-control"
+               readonly />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Username">Tên đăng nhập</label>
+
+        <input asp-for="Username"
+               class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Fullname">Họ và tên</label>
+
+        <input asp-for="Fullname"
+               class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Password">Mật khẩu</label>
+
+        <input asp-for="Password"
+               type="password"
+               class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email">Email</label>
+
+        <input asp-for="Email"
+               class="form-control" />
+    </div>
+
+    <br />
+
+    <input type="submit"
+           value="Lưu"
+           class="btn btn-primary" />
+
+</form>
